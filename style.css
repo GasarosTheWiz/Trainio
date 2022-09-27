@@ -1,4 +1,4 @@
-/*global styles*/
+
 html{
     font-size: 62.5%;
 }
@@ -7,6 +7,7 @@ html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
     
 }
 
@@ -57,7 +58,7 @@ button:hover{
     background-color: #27394e;
 }
 
-/* nav with hero */
+
 
 .main-head{
     background: #131c27;
@@ -137,9 +138,13 @@ nav ul{
 
 }
 
+
+
 .moving-cloud-1{
     animation: cloudAnimation 5.2s infinite alternate ease-in-out;
     z-index: -1;
+    
+    
 }
 
 .moving-cloud-2{
@@ -157,7 +162,7 @@ nav ul{
         transform: translate(0% , 0%);
     }
 }
-/* benefits section*/
+
 #benefits{
     min-height: 100vh;
     background: linear-gradient(rgba(235, 226, 226, 0.8),transparent),
@@ -166,6 +171,7 @@ nav ul{
     background-position: center;
     display: flex;
     align-items: center;
+    justify-content: center;
     position:relative;
     
 }
@@ -180,12 +186,18 @@ nav ul{
 }
 
 .benefits-header h3{
-    padding: 1rem;
+    position: absolute;
+    top: 25%;
+
     
 }
 
+.benefits-header h2{
+    position: absolute;
+    top: 15%;
+}
+
 .cards{
-    width: 90%;
     margin: auto;
     display: flex;
     min-height: 70vh;
@@ -203,7 +215,7 @@ nav ul{
 
 .cards img{
     max-width: 15%;
-    margin: 2rem;
+    margin: 5rem;
 }
 
 .card h4,p{
@@ -264,5 +276,73 @@ footer .git{
     }
 
  }
+
+ #contract{
+    min-height: 100vh;
+    
+    background: linear-gradient(rgba(235, 226, 226, 0.8),transparent),
+    url("/img/pixabay3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+
+}
+
+.form-wrapper{
+    background: rgba(19, 28, 39, 0.8);
+    min-width: 30%;
+    
+    color:white;
+    border-radius: 20px;
+    
+}
+
+.form-head{
+    text-align: center;
+    padding:4rem;
+}
+
+.name-form,
+.email-form{
+    padding: 3rem;
+    text-align: center;
+}
+
+.form-wrapper label{
+    margin: 0rem 3rem;
+}
+
+.form-wrapper button{
+    width: 100%;
+    padding: 2rem;
+    margin-top: 8rem;
+    border-bottom-left-radius: 20px ;
+    border-bottom-right-radius: 20px ;
+}
+
+.form-wrapper input{
+    padding: 1rem 3rem;
+}
+
+footer{
+    color:white;
+    background: rgba(19, 28, 39, 1);
+}
+
+.footer-wrapper{
+    display: flex;
+    padding: 2rem;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    flex-wrap: wrap;
+}
+
 
 
