@@ -45,11 +45,11 @@ a{
 
 button{
     padding:2rem 6rem;
-    background: #4c6e97;
+    background: #606b79;
     border: none;
     color: white;
     font-size: 1.8rem;
-    curson:pointer;
+    cursor:pointer;
     transition: background 0.1 ease-in-out;
 }
 
@@ -61,10 +61,28 @@ button:hover{
 
 .main-head{
     background: #131c27;
-    color: white;
+    color: rgba(235, 226, 226, 0.925);
     position: sticky;
     top:0px;
     z-index: 3; 
+}
+
+nav{
+    min-height: 10vh;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding:2rem;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+nav ul{
+    display: flex;
+    flex:1 1 40rem;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
 }
 
 #logo{
@@ -73,13 +91,108 @@ button:hover{
     font-size: 3rem;
 }
 
+.hero{
+    min-height: 90vh;
+    background: linear-gradient(rgba(235, 226, 226, 0.8),transparent),
+    url("/img/pixabay2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: black;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h3{
+    padding:5rem;
+}
+
+#paths{
+    background: linear-gradient(rgba(235, 226, 226, 0.8),transparent),
+    url("/img/pixabay.jpg");
+    min-height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.path-header h3{
+    padding: 5rem;
+}
+
+.cloud{
+    position:absolute;
+    top:0%;
+    right:0%;
+
+}
+
+.moving-cloud-1{
+    animation: cloudAnimation 5.2s infinite alternate ease-in-out;
+    z-index: -1;
+}
+
+.moving-cloud-2{
+    z-index: -2;
+    top:13%;
+    opacity: 0.5;
+    animation: cloudAnimation 5.5s infinite alternate ease-in-out;
+}
+
+@keyframes cloudAnimation{
+    from{
+        transform: translate(20% , -20%);
+    }
+    to{
+        transform: translate(0% , 0%);
+    }
+}
+/* benefits section*/
+#benefits{
+    min-height: 100vh;
+    background: linear-gradient(rgba(235, 226, 226, 0.8),transparent),
+    url("/img/contact-mountain.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position:relative;
+    
+}
 
 
+.benefits-header{
+    display: flex;
+    padding:3rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
+.benefits-header h3{
+    padding: 1rem;
+    
+}
 
+.cards{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    min-height: 70vh;
+    align-items: center;
+    flex-wrap: wrap;
 
-
-
+}
 
 .card{
     flex: 1 1 25rem;
@@ -98,5 +211,58 @@ button:hover{
 }
 
 .card-icon{
-    background: #27394e;
+    background: #4d545e;
 }
+
+footer{
+    color: black;
+    background: rgba(235, 226, 226,1);
+}
+
+.footer-wrapper{
+    display: flex;
+    padding: 2rem;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    min-height: 10vh;
+    flex-wrap: wrap;
+}
+
+footer h5{
+    flex:1 1 40rem;
+}
+footer ul{
+    display: flex;
+    list-style: none;
+    flex:1 1 20rem;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+footer .git{
+    margin: 7rem;
+}
+
+@media screen and (max-width: 922px){
+
+    html{
+        font-size: 45%;
+    }
+    nav{
+        text-align: center;
+    }
+    #logo{
+        padding: 2rem;
+    }
+
+    .cloud{
+        height: 40rem;
+        pointer-events: none;
+        
+    }
+
+ }
+
+
