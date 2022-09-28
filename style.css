@@ -1,3 +1,4 @@
+/*globals*/
 
 html{
     font-size: 62.5%;
@@ -7,8 +8,6 @@ html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
-    
 }
 
 body{
@@ -24,19 +23,19 @@ button,
 label,
 input,
 p{
-    font-size: 2.6rem;
+    font-size: 1.5rem;
 }
 
 h2{
-    font-size: 4.8rem;
+    font-size: 2.6rem;
 }
 
 h3{
-    font-size: 3rem;
+    font-size: 1.6rem;
 }
 
 h4,h5{
-    font-size: 2.8rem;
+    font-size: 1.5rem;
 }
 
 a{
@@ -44,21 +43,7 @@ a{
     text-decoration: none;
 }
 
-button{
-    padding:2rem 6rem;
-    background: #606b79;
-    border: none;
-    color: white;
-    font-size: 1.8rem;
-    cursor:pointer;
-    transition: background 0.1 ease-in-out;
-}
-
-button:hover{
-    background-color: #27394e;
-}
-
-
+/*top of the screen*/
 
 .main-head{
     background: #131c27;
@@ -86,12 +71,30 @@ nav ul{
     list-style: none;
 }
 
+/*button/logo styling*/
+
+button{
+    padding:2rem 6rem;
+    background: #606b79;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor:pointer;
+    transition: background 0.1 ease-in-out;
+}
+
+button:hover{
+    background-color: #27394e;
+}
+
 #logo{
     flex:2 1 40rem;
     font-family: 'Poppins' , sans-serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
+
 }
 
+/*hero-path section*/
 .hero{
     min-height: 90vh;
     background: linear-gradient(rgba(235, 226, 226, 0.8),transparent),
@@ -131,26 +134,23 @@ nav ul{
     padding: 5rem;
 }
 
+
+/*cloud animation*/
 .cloud{
     position:absolute;
     top:0%;
     right:0%;
 
 }
-
-
-
 .moving-cloud-1{
     animation: cloudAnimation 5.2s infinite alternate ease-in-out;
-    z-index: -1;
-    
-    
+    z-index: -1; 
 }
 
 .moving-cloud-2{
     z-index: -2;
     top:13%;
-    opacity: 0.5;
+    opacity: 0.6;
     animation: cloudAnimation 5.5s infinite alternate ease-in-out;
 }
 
@@ -163,9 +163,10 @@ nav ul{
     }
 }
 
+/*benefits card*/
 #benefits{
     min-height: 100vh;
-    background: linear-gradient(rgba(235, 226, 226, 0.8),transparent),
+    background: linear-gradient(rgba(53, 51, 51, 0.8),transparent),
     url("/img/contact-mountain.png");
     background-size: cover;
     background-position: center;
@@ -203,6 +204,8 @@ nav ul{
     min-height: 70vh;
     align-items: center;
     flex-wrap: wrap;
+    width: 85%;
+    
 
 }
 
@@ -210,12 +213,14 @@ nav ul{
     flex: 1 1 25rem;
     min-height: 40vh;
     margin:2rem 5rem;
-    box-shadow: 0px 10px 10px rgba(0,0,0,0.1) ,0px 200px 20px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 10px rgba(107, 103, 103, 0.1) ,0px 200px 20px rgba(0,0,0,0.1);
 }
 
 .cards img{
     max-width: 15%;
-    margin: 5rem;
+    margin: 2rem;
+    
+
 }
 
 .card h4,p{
@@ -223,63 +228,15 @@ nav ul{
 }
 
 .card-icon{
-    background: #4d545e;
-}
-
-footer{
-    color: black;
-    background: rgba(235, 226, 226,1);
-}
-
-.footer-wrapper{
-    display: flex;
-    padding: 2rem;
-    width: 90%;
-    margin: auto;
-    align-items: center;
-    min-height: 10vh;
-    flex-wrap: wrap;
-}
-
-footer h5{
-    flex:1 1 40rem;
-}
-footer ul{
-    display: flex;
-    list-style: none;
-    flex:1 1 20rem;
-    justify-content: center;
-    align-items: center;
+    background: #3f444b;
     
 }
 
-footer .git{
-    margin: 7rem;
-}
 
-@media screen and (max-width: 922px){
-
-    html{
-        font-size: 45%;
-    }
-    nav{
-        text-align: center;
-    }
-    #logo{
-        padding: 2rem;
-    }
-
-    .cloud{
-        height: 40rem;
-        pointer-events: none;
-        
-    }
-
- }
-
+/*contract card */
  #contract{
     min-height: 100vh;
-    
+
     background: linear-gradient(rgba(235, 226, 226, 0.8),transparent),
     url("/img/pixabay3.jpg");
     background-size: cover;
@@ -287,11 +244,10 @@ footer .git{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;   
 
 }
-
+/*name/email form*/
 .form-wrapper{
     background: rgba(19, 28, 39, 0.8);
     min-width: 30%;
@@ -328,10 +284,28 @@ footer .git{
     padding: 1rem 3rem;
 }
 
+/*footer-downscreen section*/
 footer{
     color:white;
     background: rgba(19, 28, 39, 1);
 }
+
+footer .git{
+    margin: 7rem;
+}
+
+footer h5{
+    flex:1 1 40rem;
+}
+
+footer ul{
+    display: flex;
+    list-style: none;
+    flex:1 1 40rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 .footer-wrapper{
     display: flex;
@@ -339,10 +313,33 @@ footer{
     width: 90%;
     margin: auto;
     align-items: center;
-    justify-content: center;
     min-height: 10vh;
     flex-wrap: wrap;
 }
 
 
 
+
+
+ /*media query*/
+ @media screen and (max-width: 922px){
+
+    html{
+        font-size: 45%;
+    }
+    nav{
+        text-align: center;
+    }
+    #logo{
+        padding: 2rem;
+    }
+
+    .cloud{
+        height: 40rem;
+        pointer-events: none;
+        opacity: 1;
+    }
+
+ }
+
+ 
